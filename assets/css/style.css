@@ -105,6 +105,20 @@ a:hover,a:focus{
 .text-white{
     color: #fff !important;
 }
+.title-style{
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-17{
+    font-size: 17px;
+}
+.fw-700{
+    font-weight: 700;
+}
 @media only screen and (max-width: 479px){
     .vertical-tab .nav-tabs{
         width: 100%;
