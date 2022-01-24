@@ -20,6 +20,7 @@ if (!empty($_FILES['files']) && $_FILES['files']['error'] == 0) {
 	$fileSize = $_FILES['files']['size'];
 	$extension = end($parts);
 	$allowedExts = ['pdf'];
+	$target_path_pdf = "../assets/uploads/";
 
 	//file type pdf validation
 	if (($_FILES["files"]["type"] != "application/pdf") && in_array($extension, $allowedExts)){
@@ -38,7 +39,10 @@ if (!empty($_FILES['files']) && $_FILES['files']['error'] == 0) {
 		$rows = $stmt1->fetchAll();
 
 		if(count($rows) == 0){
-			if(move_uploaded_file($tmpName, "../assets/uploads/".$file)){
+			if(!is_dir($target_path_pdf)){
+			    mkdir($target_path_pdf);
+			}
+			if(move_uploaded_file($tmpName, $target_path_pdf.$file)){
 			 	$stmt = $db->prepare("INSERT INTO `documents` (`file`, `file_name`, `status`, `created_by`) VALUES ('$file', '$fileName', $status, $userID)");
 			    if ($stmt->execute()) 
 			    {

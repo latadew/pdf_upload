@@ -36,11 +36,11 @@ $pdfList = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <!-- Tab panes -->
             <div class="tab-content tabs">
                 <?php
-                    foreach ($pdfList as $key => $row){
-                        $active = ($key==0) ? 'active' : '';
+                    foreach ($pdfList as $key1 => $row1){
+                        $active = ($key1==0) ? 'active' : '';
                     ?>
-                        <div role="tabpanel" class="tab-pane fade in <?=$active;?>" id="Section1">
-                            <iframe src="assets/uploads/<?=$row['file']?>#toolbar=0" style="width:955px; min-height:500px; overflow-y: scroll;" frameborder="0"></iframe>
+                        <div role="tabpanel" class="tab-pane fade in <?=$active;?>" id="Section<?=$key1;?>">
+                            <iframe src="assets/uploads/<?=$row1['file']?>#toolbar=0" style="width:955px; min-height:700px; overflow-y: scroll;" frameborder="0"></iframe>
                         </div>
                     <?php
                     }
