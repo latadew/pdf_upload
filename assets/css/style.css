@@ -113,11 +113,26 @@ a:hover,a:focus{
 .fs-14{
     font-size: 14px;
 }
+.fs-12{
+    font-size: 11px !important;
+}
 .fs-17{
     font-size: 17px;
 }
 .fw-700{
     font-weight: 700;
+}
+.file-type-style{
+    margin-top: 10px; 
+    background: whitesmoke;
+    border: none;
+    box-shadow: none;
+}
+.btn-style{
+    border: none;
+    background: whitesmoke;
+    font-size: 14px;
+    margin-left: 18px;
 }
 @media only screen and (max-width: 479px){
     .vertical-tab .nav-tabs{

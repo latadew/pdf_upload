@@ -6,8 +6,16 @@
         <div class="row">
             <div class="col-md-3" style="background:#f5f5f5 !important">
                 <div class="navbar-header">
-                  <span class="navbar-brand title-style">FILES</span> 
-                  <a class="navbar-brand fs-14" href="javascript:void(0);">Upload</a>
+                    <form id="formID" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <input type="file" name="files" placeholder="FILES" accept="application/pdf" class="form-control file-type-style" required="required" />
+                            </div>
+                            <div class="col-md-5">
+                                <button type="submit" class="navbar-brand btn-style" href="javascript:void(0);" style="">Upload <i class="fa fa-upload"></i></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-9" style="background:#438fd1 !important;">
@@ -17,6 +25,11 @@
             </div>
         </div>
     </nav>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="alertMsg"></div>
+        </div>
+    </div>
     <div id="divDocID"></div>
 </div>
 <!-- footer start-->
